@@ -22,7 +22,7 @@ def main():
 
         # Add subdir to all keys (encode_images defaults to key = <filename>; I want the full path as the key)
         full_path_encodings = {
-            f'{pic_dir}{k}': v for k, v in encodings.items()}
+            f'{pic_dir}/{k}': v for k, v in encodings.items()}
 
         all_encodings.update(full_path_encodings)
 
