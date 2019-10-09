@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Duplicate Images UI</title>
+</head>
+
+<body>
+
+    <img id="my_image">
+
+    {% for im_name in data: %}
+    <script>
+        document.getElementById("my_image").src = 'http://localhost:8000/{{ im_name }}';
+    </script>
+    {% endfor %}
+
+</body>
+
+</html>
