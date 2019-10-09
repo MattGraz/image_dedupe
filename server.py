@@ -36,11 +36,11 @@ app = Flask(__name__)
 #         subprocess.call('calc.exe')
 
 
-# def stream_template(template_name, **context):
-#     app.update_template_context(context)
-#     t = app.jinja_env.get_template(template_name)
-#     rv = t.stream(context)
-#     return rv
+def stream_template(template_name, **context):
+    app.update_template_context(context)
+    t = app.jinja_env.get_template(template_name)
+    rv = t.stream(context)
+    return rv
 
 
 @app.route('/new_image')
@@ -53,7 +53,7 @@ def generate_image():
             time.sleep(1)
             yield(str(i) + '.jpg')
 
-    return Response(stream_template('templates/image.html', data=generate()))
+    return Response(stream_template('image.html', data=generate()))
 
 
 if __name__ == "__main__":
