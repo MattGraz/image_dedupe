@@ -53,7 +53,7 @@ def generate_image():
             time.sleep(1)
             yield(str(i) + '.jpg')
 
-    return Response(stream_template('image.html', data=generate()))
+    return Response(stream_template('templates/image.html', data=generate()))
 
 
 if __name__ == "__main__":

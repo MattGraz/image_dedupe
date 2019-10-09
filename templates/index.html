@@ -10,11 +10,15 @@
 
     <img id="my_image">
 
-    {% for im_name in data: %}
+    <script>
+        document.getElementById("my_image").src = 'http://localhost:5000/new_image';
+    </script>
+
+    <!-- {% for im_name in data: %}
     <script>
         document.getElementById("my_image").src = 'http://localhost:5000/{{ im_name }}';
     </script>
-    {% endfor %}
+    {% endfor %} -->
 
 </body>
 
