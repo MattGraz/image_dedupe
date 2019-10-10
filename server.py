@@ -9,7 +9,8 @@ app = Flask(__name__)
 @app.route('/index')
 def show_index():
     full_filename = '/home/its-an-avacado/repos/image_dedupe/out/10.jpg'
-    return render_template("index.html", user_image=full_filename)
+    # return render_template("index.html", user_image=full_filename)
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
